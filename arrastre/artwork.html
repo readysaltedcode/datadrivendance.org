@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Will fill in later -->
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+
+
+
+    <title>Data Vis</title>
+
+    <!-- Core Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <!-- arrastre.org CSS -->
+    <link rel="stylesheet" type="text/css" href="css/arrastre.css" />
+    <!-- Google font - Quicksand -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="img/Arrestre_logo_Small.png" /></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" id="nav-list">
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="event.html">DANCE</a></li>
+              <li id="active-nav"><a href="artwork.html">DATA VIS</a></li>
+              <li><a href="resources.html">RESOURCES</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <div class="row data-vis-header">
+        <div class="col-lg-2 col-md-1">
+        </div> <!-- /col -->
+        <div class="col-lg-8 col-md-10" id="data-vis-nav">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 data-vis-nav-button">
+            <a href="artwork_5.html"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          </div> <!-- /col -->
+          <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+            <p class="data-vis-title">DEBUGGING</p>
+          </div> <!-- /col -->
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 data-vis-nav-button">
+            <a href="artwork_2.html"><span class="glyphicon glyphicon-chevron-right"></span></a>
+          </div> <!-- /col -->
+        </div> <!-- /col -->
+        <div class="col-lg-2 col-md-1">
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+
+
+      <div class="row data-vis-container">
+        <div class="col-lg-2 col-md-1">
+        </div> <!-- /col -->
+        <div class="col-lg-8 col-md-10" id="data-vis-animation">
+          <p data-height="616" data-theme-id="8632" data-slug-hash="ILDyu" data-default-tab="result" data-user="readysaltedcode" class='codepen'>See the Pen <a href='http://codepen.io/readysaltedcode/pen/ILDyu/'>ILDyu</a> by Genevieve Smith-Nunes (<a href='http://codepen.io/readysaltedcode'>@readysaltedcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+          <script async src="http://codepen.io/assets/embed/ei.js"></script>
+        </div> <!-- /col -->
+        <div class="col-lg-2 col-md-1">
+        </div> <!-- /col -->
+      </div> <!-- /data-vis-container -->
+
+
+      <div class="row data-vis-subnav">
+        <div class="col-lg-2 col-md-1 hidden-sm hidden-xs">
+        </div> <!-- /col -->
+        <div class="col-lg-8 col-md-10" id="data-vis-subnav">
+          <a href="artwork.html"><div class="col-lg-five data-vis-subnav-button" id="active-data-vis-button">
+            <p>DEBUGGING</p>
+          </div></a> <!-- /col -->
+          <a href="artwork_2.html"><div class="col-lg-five data-vis-subnav-button">
+            <p>ALGORITHMS</p>
+          </div></a> <!-- /col -->
+          <a href="artwork_3.html"><div class="col-lg-five data-vis-subnav-button">
+            <p>BIG DATA</p>
+          </div></a> <!-- /col -->
+          <a href="artwork_4.html"><div class="col-lg-five data-vis-subnav-button">
+            <p>BINARY/BOOLEAN</p>
+          </div></a> <!-- /col -->
+          <a href="artwork_5.html"><div class="col-lg-five data-vis-subnav-button">
+            <p>COMPUTATION</p>
+          </div></a> <!-- /col -->
+        </div> <!-- /col -->
+        <div class="col-lg-2 col-md-1">
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+
+
+      <div class="row data-vis-code">
+        <div class="col-lg-2 col-md-1 hidden-sm hidden-xs">
+        </div> <!-- /col -->
+        <div class="col-lg-8 col-md-10">
+          <div data-height="3875" data-theme-id="8632" data-slug-hash="ILDyu" data-default-tab="js" data-user="readysaltedcode" class='codepen'>
+            <pre><code>
+              var canvas = document.getElementById(&#39;mycanvas&#39;);
+              
+              var width = 1000, height = 600;
+
+              var color = d3.scale.category20();
+              var xScale = d3.scale.linear().domain([-1.5, 1.5]).range([0, width]);
+              var yScale = d3.scale.linear().domain([-1.5, 1.5]).range([height, 0]);
+
+              var ctx = canvas.getContext(&#39;2d&#39;);
+
+              ctx.fillStyle = &quot;rgb(0,0,0)&quot;;
+              ctx.fillRect(0, 0, width, height);
+
+                function draw1(json, err) {
+                  var triangles = getTrianglesOfSkeleton(json, 0);
+
+                  // console.log(triangles);
+
+                  // ctx.fillStyle = &quot;rgba(0, 0, 0, 0.01)&quot;;
+                  // ctx.fillRect(0, 0, width, height);
+             
+                  // ctx.globalCompositeOperation = &#39;xor&#39;;
+                    ctx.beginPath();
+                    ctx.fillStyle = &#39;#aec7e8&#39;;
+                  _.each(triangles, function(triangle, index) {
+                    _.each(triangle, function(vertex) {
+                      var x = xScale(vertex.X);
+                      var y = yScale(vertex.Y);
+                      ctx.lineTo(x, y);
+                    });
+                  });
+             
+                  // Draw head
+                  _.each(json.Skeletons[0].Joints, function(j) {
+                    if(j.JointType !== &#39;Head&#39;)
+                      return;
+                    var x = xScale(j.Position.X);
+                    var y = yScale(j.Position.Y);
+                    ctx.lineTo(x,y);
+                  });
+
+                 ctx.fill();
+              }
+
+              function draw2(json, err) {
+                  var triangles = getTrianglesOfSkeleton(json, 0);
+
+                  // console.log(triangles);
+
+                  ctx.fillStyle = &quot;rgba(0, 0, 0, 0.01)&quot;;
+                  ctx.fillRect(0, 0, width, height);
+             
+                  // ctx.globalCompositeOperation = &#39;xor&#39;;
+                    ctx.beginPath();
+                    ctx.fillStyle = &#39;#aec7e8&#39;;
+                  _.each(triangles, function(triangle, index) {
+                    _.each(triangle, function(vertex) {
+                      var x = xScale(vertex.X);
+                      var y = yScale(vertex.Y);
+                      ctx.lineTo(x, y);
+                    });
+                  });
+             
+                  // Draw head
+                  _.each(json.Skeletons[0].Joints, function(j) {
+                    if(j.JointType !== &#39;Head&#39;)
+                      return;
+                    var x = xScale(j.Position.X);
+                    var y = yScale(j.Position.Y);
+                    ctx.lineTo(x,y);
+                  });
+
+                 ctx.fill();
+              }
+
+
+              function draw3(json, err) {
+                  var triangles = getTrianglesOfSkeleton(json, 0);
+             
+                   ctx.fillStyle = &quot;rgba(0, 0, 0, 0.03)&quot;;
+                  ctx.fillRect(0, 0, width, height);
+
+                    ctx.fillStyle = &#39;#aec7e8&#39;;
+
+                  _.each(triangles, function(triangle) {
+                    ctx.beginPath();
+                    _.each(triangle, function(vertex) {
+                      var x = xScale(vertex.X);
+                      var y = yScale(vertex.Y);
+                      ctx.lineTo(x, y);
+                    });
+                    ctx.fill();
+                  });
+
+                  // Draw head
+                  _.each(json.Skeletons[0].Joints, function(j) {
+                    if(j.JointType !== &#39;Head&#39;)
+                      return;
+
+                    var x = xScale(j.Position.X);
+                    var y = yScale(j.Position.Y);
+                    drawCircle(ctx, x, y, 18);
+                  });
+              }
+
+              function draw4(json, err) {
+                  var triangles = getTrianglesOfSkeleton(json, 0);
+
+                  // console.log(triangles);
+
+                  ctx.fillStyle = &quot;rgba(0, 0, 0, 0.05)&quot;;   // 0.01 a nice setting
+                  ctx.fillRect(0, 0, width, height);
+             
+                  _.each(triangles, function(triangle, index) {
+                    ctx.fillStyle = color(index);
+                    ctx.beginPath();
+                    _.each(triangle, function(vertex) {
+                      var x = xScale(vertex.X);
+                      var y = yScale(vertex.Y);
+                      ctx.lineTo(x, y);
+                    });
+                    ctx.fill();
+                  });
+
+                  // Draw head
+                  _.each(json.Skeletons[0].Joints, function(j) {
+                    if(j.JointType !== &#39;Head&#39;)
+                      return;
+
+                    ctx.fillStyle = color(15);
+                    var x = xScale(j.Position.X);
+                    var y = yScale(j.Position.Y);
+                    drawCircle(ctx, x, y, 18);
+                  });
+              }
+
+
+              function draw5(json, err) {
+                
+                  var triangles = getTrianglesOfSkeleton(json, 0);
+
+                  // console.log(triangles);
+
+                  ctx.fillStyle = &quot;rgba(0, 0, 0, 0.2)&quot;;   // 0.01 a nice setting
+                  ctx.fillRect(0, 0, width, height);
+             
+                  _.each(triangles, function(triangle, index) {
+                    ctx.fillStyle = color(index);
+                    ctx.beginPath();
+                    _.each(triangle, function(vertex) {
+                      var x = xScale(vertex.X);
+                      var y = yScale(vertex.Y);
+                      ctx.lineTo(x, y);
+                    });
+                    ctx.fill();
+                  });
+
+                  // Draw head
+                  _.each(json.Skeletons[0].Joints, function(j) {
+                    if(j.JointType !== &#39;Head&#39;)
+                      return;
+
+                    ctx.fillStyle = color(15);
+                    var x = xScale(j.Position.X);
+                    var y = yScale(j.Position.Y);
+                    drawCircle(ctx, x, y, 18);
+                  });
+              }
+              
+              // poll();
+              var drawFunction = draw1;
+
+              setTimeout(function() {drawFunction = draw2;}, 8000);
+              setTimeout(function() {drawFunction = draw3;}, 16000);
+              setTimeout(function() {drawFunction = draw4;}, 24000);
+              setTimeout(function() {drawFunction = draw5;}, 32000);
+              
+              
+            // You can choose one of these to visualise a different dance
+            var DATASET_ALGORITHM = &#39;https://d10u56tzn9e9rq.cloudfront.net/algorithm_&#39;;
+
+            var DATASET_BINARY = &#39;https://d10u56tzn9e9rq.cloudfront.net/binary_&#39;;
+
+            var DATASET_WHOLEPIECE = &#39;https://d10u56tzn9e9rq.cloudfront.net/wholepiece_&#39;;
+
+            var dataFetcher = new ChunkedDataFetcher(DATASET_ALGORITHM);
+            dataFetcher.drawFunction = function(json) {
+                  drawFunction(json, null);
+            }
+            </code></pre>
+          </div>
+          <script async src="//codepen.io/assets/embed/ei.js"></script>
+
+          <p class="codepen-footer">You can edit this data visualisation and watch the changes in real-time <a href='http://codepen.io/readysaltedcode/pen/ILDyu/'>here</a> on <a href='http://codepen.io'>CodePen</a>.</p>
+
+        </div> <!-- /col -->
+        <div class="col-lg-2 col-md-1 hidden-sm hidden-xs">
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+
+
+       <div class="row">
+        <div class="col-lg-2 col-md-1 hidden-sm hidden-xs">
+        </div> <!-- /col -->
+        <div class="col-lg-8 col-md-10">
+          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8 footer-left">
+            <p>&copy; COPYRIGHT 2014 <a href="http://www.readysaltedcode.org/" class="footer-link">READYSALTEDCODE CIC</a></p>
+          </div> <!-- /col -->
+          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-4 footer-right">
+            <p><a href="termsandconditions.html" class="footer-link">TERMS &amp; CONDITIONS</a></p>
+          </div> <!-- /col -->
+        </div> <!-- /col -->
+        <div class="col-lg-2 col-md-1 hidden-sm hidden-xs">
+        </div> <!-- /col -->
+      </div> <!-- /row -->    
+
+    </div> <!-- /container -->
+
+
+    <!-- Scripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-61540044-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </body>
+
+</html>

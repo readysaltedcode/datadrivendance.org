@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Will fill in later -->
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+
+
+
+    <title>Data Vis</title>
+
+    <!-- Core Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <!-- arrastre.org CSS -->
+    <link rel="stylesheet" type="text/css" href="css/arrastre.css" />
+    <!-- Google font - Quicksand -->
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> 
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+
+  </head>
+
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="img/Arrestre_logo_Small.png" /></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" id="nav-list">
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="event.html">DANCE</a></li>
+              <li id="active-nav"><a href="artwork.html">DATA VIS</a></li>
+              <li><a href="resources.html">RESOURCES</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+      <div class="row data-vis-header">
+        <div class="col-lg-2 col-md-1">
+        </div> <!-- /col -->
+        <div class="col-lg-8 col-md-10" id="data-vis-nav">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 data-vis-nav-button">
+            <a href="artwork_3.html"><span class="glyphicon glyphicon-chevron-left"></span></a>
+          </div> <!-- /col -->
+          <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
+            <p class="data-vis-title">BINARY/BOOLEAN</p>
+          </div> <!-- /col -->
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 data-vis-nav-button">
+            <a href="artwork_5.html"><span class="glyphicon glyphicon-chevron-right"></span></a>
+          </div> <!-- /col -->
+        </div> <!-- /col -->
+        <div class="col-lg-2 col-md-1">
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+
+
+      <div class="row data-vis-container">
+        <div class="col-lg-2 col-md-1">
+        </div> <!-- /col -->
+        <div class="col-lg-8 col-md-10" id="data-vis-animation">
+          <p data-height="616" data-theme-id="8632" data-slug-hash="ALDEp" data-default-tab="result" data-user="readysaltedcode" class='codepen'>See the Pen <a href='http://codepen.io/readysaltedcode/pen/ALDEp/'>ALDEp</a> by Genevieve Smith-Nunes (<a href='http://codepen.io/readysaltedcode'>@readysaltedcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+          <script async src="http://codepen.io/assets/embed/ei.js"></script>
+        </div> <!-- /col -->
+        <div class="col-lg-2 col-md-1">
+        </div> <!-- /col -->
+      </div> <!-- /data-vis-container -->
+
+
+      <div class="row data-vis-subnav">
+        <div class="col-lg-2 col-md-1 hidden-sm hidden-xs">
+        </div> <!-- /col -->
+        <div class="col-lg-8 col-md-10" id="data-vis-subnav">
+          <a href="artwork.html"><div class="col-lg-five data-vis-subnav-button">
+            <p>DEBUGGING</p>
+          </div></a> <!-- /col -->
+          <a href="artwork_2.html"><div class="col-lg-five data-vis-subnav-button">
+            <p>ALGORITHMS</p>
+          </div></a> <!-- /col -->
+          <a href="artwork_3.html"><div class="col-lg-five data-vis-subnav-button">
+            <p>BIG DATA</p>
+          </div></a> <!-- /col -->
+          <a href="artwork_4.html"><div class="col-lg-five data-vis-subnav-button" id="active-data-vis-button">
+            <p>BINARY/BOOLEAN</p>
+          </div></a> <!-- /col -->
+          <a href="artwork_5.html"><div class="col-lg-five data-vis-subnav-button">
+            <p>COMPUTATION</p>
+          </div></a> <!-- /col -->
+        </div> <!-- /col -->
+        <div class="col-lg-2 col-md-1">
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+
+
+      <div class="row data-vis-code">
+        <div class="col-lg-2 col-md-1 hidden-sm hidden-xs">
+        </div> <!-- /col -->
+        <div class="col-lg-8 col-md-10">
+          <div data-height="1850" data-theme-id="8632" data-slug-hash="ALDEp" data-default-tab="js" data-user="readysaltedcode" class='codepen'>
+            <pre><code>
+              function BooleanVis(canvas) {
+              var width = 1000;
+              var height = 800;
+
+              // var color = d3.scale.category20();
+              var color = d3.scale.linear().domain([-1, 0]).range([&#39;white&#39;, &#39;red&#39;]);
+              var scale = d3.scale.linear().domain([-3, 3]).range([0, 255]);
+              var startTime = Date.now();
+
+              // Duration 4:06
+              var chanceOfBinary = d3.scale.linear().domain([startTime, startTime + 135000, startTime + 222000, startTime + 223000, startTime + 300000]).range([0, 0, 1, 1, 1]).clamp(true);
+              var numCirclesScale = d3.scale.linear().domain([startTime, startTime + 135000, startTime + 222000, startTime + 223000, startTime + 300000]).range([0, 0, 5, 0, 0]).clamp(true);
+              var textScale = d3.scale.linear().domain([startTime, startTime + 135000, startTime + 235000, startTime + 300000]).range([0, 0, 100, 100]).clamp(true);
+
+              
+              this.color = d3.scale.category20b();
+              this.scale = d3.scale.linear().domain([-3, 6]).range([1000, 0]);
+              this.indexScale = d3.scale.threshold().domain([0, 54000, 70000, 84000, 120000, 154000, 167000, 200000, 230000]).range([0, 3, 10, 40, 10, 1, 60, 20, 10, 10]);
+
+              var ctx = canvas.getContext(&#39;2d&#39;);
+              
+              ctx.fillStyle = &quot;rgb(0,0,0)&quot;;
+              ctx.fillRect(0, 0, this.width, this.height);
+
+              // poll()
+              this.poll = function() {
+                var me = this;
+                d3.json(&#39;/playbackServer/api/data.json&#39;, function(err,json){me.draw(err,json);});
+              };
+              
+              this.draw = function(json) {
+                if(json === undefined) return;
+
+                var data = getDataOfSkeleton(json, 0);
+                // console.log(data);
+                // data = data.slice(0, 8);
+
+                ctx.fillStyle = &quot;rgba(0, 0, 0, 0.1)&quot;;
+                ctx.fillRect(0, 0, width, height);
+
+                // ctx.font = &#39;15px sans-serif&#39;;
+
+                var t = Date.now();
+
+                var threshold = numCirclesScale(t);
+
+                _.each(data, function(d, index) {
+                  // console.log(index);
+
+                  if(index &gt; threshold)
+                    return;
+
+                  var drawAsBinary = Math.random() &lt; chanceOfBinary(t);
+                  if(drawAsBinary) {
+
+                    var fontSize = Math.random() * textScale(t) + 8;
+                    ctx.font = &#39;bold &#39; + fontSize + &#39;px sans-serif&#39;;
+
+                    var binary = Math.round(scale(d)).toString(2);
+                    _.each(binary, function(bit) {
+                      var x = Math.random() * width;
+                      var y = Math.random() * height;
+                      ctx.fillStyle = bit === &#39;1&#39; ? &#39;red&#39; : &#39;white&#39;;
+
+                      ctx.fillText(bit, x, y);
+                    });
+                  } else {
+                    var x = Math.random() * width;
+                    var y = Math.random() * height;
+                    ctx.fillStyle = color(d);
+
+                    drawCircle(ctx, x, y, 4);
+                  }
+                });
+              };
+            };
+
+            // You can choose one of these to visualise a different dance
+            var DATASET_ALGORITHM = &#39;https://d10u56tzn9e9rq.cloudfront.net/algorithm_&#39;;
+
+            var DATASET_BINARY = &#39;https://d10u56tzn9e9rq.cloudfront.net/binary_&#39;;
+
+            var DATASET_WHOLEPIECE = &#39;https://d10u56tzn9e9rq.cloudfront.net/wholepiece_&#39;;
+
+            var dataFetcher = new ChunkedDataFetcher(DATASET_ALGORITHM);
+            var boolean = new BooleanVis( document.getElementById(&#39;mycanvas&#39;));
+            dataFetcher.drawFunction = function(json) {boolean.draw(json);
+            }
+
+          </code></pre>
+          </div><script async src="//codepen.io/assets/embed/ei.js"></script>
+          <p class="codepen-footer">You can edit this data visualisation and watch the changes in real-time <a href='http://codepen.io/readysaltedcode/pen/ALDEp/'>here</a> on <a href='http://codepen.io'>CodePen</a>.</p>
+        </div> <!-- /col -->
+        <div class="col-lg-2 col-md-1 hidden-sm hidden-xs">
+        </div> <!-- /col -->
+      </div> <!-- /row -->
+
+
+       <div class="row">
+        <div class="col-lg-2 col-md-1 hidden-sm hidden-xs">
+        </div> <!-- /col -->
+        <div class="col-lg-8 col-md-10">
+          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-8 footer-left">
+            <p>&copy; COPYRIGHT 2014 <a href="http://www.readysaltedcode.org/" class="footer-link">READYSALTEDCODE CIC</a></p>
+          </div> <!-- /col -->
+          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-4 footer-right">
+            <p><a href="termsandconditions.html" class="footer-link">TERMS &amp; CONDITIONS</a></p>
+          </div> <!-- /col -->
+        </div> <!-- /col -->
+        <div class="col-lg-2 col-md-1 hidden-sm hidden-xs">
+        </div> <!-- /col -->
+      </div> <!-- /row -->    
+
+    </div> <!-- /container -->
+
+
+    <!-- Scripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-61540044-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+  </body>
+
+</html>
