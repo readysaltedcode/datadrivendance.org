@@ -1,0 +1,35 @@
+<html>
+<style>
+body {
+  background-color: black;
+}
+
+#wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#info {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: white;
+}
+</style>
+<body>
+  <div id="wrapper">
+    <canvas id="mycanvas" width="1200" height="800"></canvas>
+    <div id="info"></div>
+  </div>
+
+  <script src="js/lodash.min.js"></script>
+  <script src="js/d3.v3.min.js"></script>
+  <script src="js/requestanimframe.js"></script>
+  <script src="js/datastorm-canvas.js"></script>
+
+  <script src="js/opener.js"></script>
+  <script>
+datastorm.opener.init();
+datastorm.opener.start();
+  </script>
+</body>

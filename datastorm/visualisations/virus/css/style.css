@@ -1,0 +1,17 @@
+html, body, .wrapper, svg {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+
+circle {
+  fill: #777;
+}
+
+line {
+  stroke: #ddd;
+  opacity: 0.5;
+  stroke-width: 1px;
+  /*shape-rendering: crispEdges;*/
+}
