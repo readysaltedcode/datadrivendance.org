@@ -1,6 +1,10 @@
 @font-face {
   font-family: qsand;
-  src: url(../fonts/qsand-regular.eot), url(../fonts/qsand-regular.woff) format('woff'), url(../fonts/qsand-regular.ttf) format('truetype');
+  src: url('/fonts/QuicksandLight.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/QuicksandLight.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/QuicksandLight.woff2') format('woff2'),
+    url('/fonts/QuicksandLight.woff') format('woff'),
+    url('/fonts/QuicksandLight.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -130,7 +134,7 @@ div#bs-example-navbar-collapse-1.navbar-collapse.collapsing ul {
   margin: -15px;
   color: #fff;
   font-size: 1.7em;
-  font-weight: bold;
+  font-weight: normal;
   text-align: center;
 }
 .main-container .home-banner p {

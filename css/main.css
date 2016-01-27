@@ -1,6 +1,6 @@
 @font-face {
   font-family: qsand;
-  src: url(../fonts/qsand-regular.eot), url(../fonts/qsand-regular.woff) format('woff'), url(../fonts/qsand-regular.ttf) format('truetype');
+  src: url(/fonts/qsand-regular.eot), url(/fonts/qsand-regular.woff) format('woff'), url(/fonts/qsand-regular.ttf) format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -459,7 +459,7 @@ div#bs-example-navbar-collapse-1.navbar-collapse.collapsing ul {
   }
   #prebanner,
   #content {
-    font-size: 1.0em;
+    font-size: 4.0em;
   }
   .footer-left,
   .footer-right {
